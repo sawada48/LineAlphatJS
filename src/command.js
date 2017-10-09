@@ -296,6 +296,14 @@ class Command extends LineAPI {
         return;
     }
 
+    async tagall() {
+        let rec = await this._getGroup(this.messages.to);
+        const mentions = await this.mention(rec.members);
+        this.messages.contentMetadata = mentions.cmddata;
+        await this._sendMessage(this.messages,mentions.names.join(''));
+        return;
+    }
+
     async kickAll() {
         let groupID;
         if(this.stateStatus.kick == 1 && this.isAdminOrBot(this.messages.from)) {
