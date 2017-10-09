@@ -147,7 +147,7 @@ class LINE extends Command {
         this.command(`.joinqr ${payload}`,this.joinQr.bind(this));
         this.command(`.spam ${payload}`,this.spamGroup.bind(this));
         this.command(`.creator`,this.creator.bind(this));
-
+        this.command(`.tagall`,this.tagall.bind(this));
         this.command(`pap ${payload}`,this.searchLocalImage.bind(this));
         this.command(`.upload ${payload}`,this.prepareUpload.bind(this));
         this.command(`vn ${payload}`,this.vn.bind(this));
