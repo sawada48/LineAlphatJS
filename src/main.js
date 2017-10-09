@@ -141,7 +141,7 @@ class LINE extends Command {
         this.command(`Recheck`,this.rechecks.bind(this));
         this.command(`Clearall`,this.clearall.bind(this));
         this.command('Myid',`Your ID: ${messages.from}`)
-        this.command('Ip ${payload}`,this.checkIP.bind(this))
+        this.command(`Ip ${payload}`,this.checkIP.bind(this))
         this.command(`Ig ${payload}`,this.checkIG.bind(this))
         this.command(`Qr ${payload}`,this.qrOpenClose.bind(this))
         this.command(`Joinqr ${payload}`,this.joinQr.bind(this));
