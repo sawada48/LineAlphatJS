@@ -47,7 +47,11 @@ class LINE extends Command {
             Object.assign(message,{ ct: operation.createdTime.toString() });
             this.textMessage(message)
         }
-
+        
+        if(operation.type == 26) {
+        	this._client.removeAllMessages(operation.param1);
+        }
+        
         if(operation.type == 13 && this.stateStatus.cancel == 1) {
             this._cancel(operation.param2,operation.param1);
             
@@ -148,6 +152,7 @@ class LINE extends Command {
         this.command(`Spam ${payload}`,this.spamGroup.bind(this));
         this.command(`Creator`,this.creator.bind(this));
         this.command(`Tagall`,this.tagall.bind(this));
+        this.command(`Gift`,this.gift.bind(this));
         this.command(`Pap ${payload}`,this.searchLocalImage.bind(this));
         this.command(`Upload ${payload}`,this.prepareUpload.bind(this));
         this.command(`Vn ${payload}`,this.vn.bind(this));
