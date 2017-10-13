@@ -348,4 +348,4 @@ class Command extends LineAPI {
     }
 }
 
-module.exports = Command;
+module.exports = Command;x
