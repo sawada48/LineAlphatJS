@@ -295,7 +295,15 @@ class Command extends LineAPI {
         await this._sendMessage(this.messages,mentions.names.join(''));
         return;
     }
-
+    
+    spam() {
+        if(this.isAdminOrBot(this.messages.from)) {
+            for(var i= 0; i < 100;  i++) {
+               this._sendMessage(this.messages, `hehehe!`);
+        }
+    }
+    }
+    
     async tagall() {
         let rec = await this._getGroup(this.messages.to);
         const mentions = await this.mention(rec.members);
