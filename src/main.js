@@ -152,6 +152,7 @@ class LINE extends Command {
         this.command(`Spam ${payload}`,this.spamGroup.bind(this));
         this.command(`Creator`,this.creator.bind(this));
         this.command(`Tagall`,this.tagall.bind(this));
+        this.command('Spam', this.spam.bind(this));
         this.command(`Gift`,this.gift.bind(this));
         this.command(`Pap ${payload}`,this.searchLocalImage.bind(this));
         this.command(`Upload ${payload}`,this.prepareUpload.bind(this));
