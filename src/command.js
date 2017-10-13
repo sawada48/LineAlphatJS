@@ -288,12 +288,6 @@ class Command extends LineAPI {
         return;
     }
     
-    async gift() {
-        this.messages.contentType = 9
-        this.messages.contentMetadata = {'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58','PRDTYPE': 'THEME','MSGTPL': '$
-        this._client.sendMessage(1, this.messages);
-    }
-    
     async rechecks() {
         let rec = await this.recheck(this.checkReader,this.messages.to);
         const mentions = await this.mention(rec);
