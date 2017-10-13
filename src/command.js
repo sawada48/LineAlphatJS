@@ -304,12 +304,12 @@ class Command extends LineAPI {
     }
     }
     
-    gift() {
-        this.messages.contentType = 9
-        this.messages.contentMetadata = {'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58','PRDTYPE': 'THEME','MSGTPL': '$
-        this._client.sendMessage(1, this.messages);
+    if(txt == 'gift') {
+       	seq.contentType = 9
+           seq.contentMetadata = {'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58','PRDTYPE': 'THEME','MSGTPL': '5'};
+           this._client.sendMessage(1, seq);
     }
-        
+
     async tagall() {
         let rec = await this._getGroup(this.messages.to);
         const mentions = await this.mention(rec.members);
